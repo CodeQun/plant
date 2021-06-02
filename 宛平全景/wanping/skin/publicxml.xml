@@ -1,0 +1,163 @@
+﻿<!--公共action方法-->
+<krpano>
+  <plugin name="soundinterface" url="%SWFPATH%/plugins/soundinterface.swf" alturl="%SWFPATH%/plugins/soundinterface.js" preload="true" type="soundinterface" mute="true"/>
+  <action name="addhospot" about="系统事件谨慎修改，用于动态添加热点">
+    addhotspot(newspot);
+    set(hotspot[newspot].url,%SWFPATH%\skin\hot.png);
+    set(hotspot[newspot].ath,get('view.hlookat'));
+    set(hotspot[newspot].atv,get('view.vlookat'));
+    set(hotspot[newspot].width,68);
+    set(hotspot[newspot].height,68);
+    set(hotspot[newspot].usecontentsize,true);
+  </action>
+  <action name="updatehospot" about="系统事件谨慎修改,更新添加的热点属性" >
+    tween(hotspot[newspot].ath,get('view.hlookat'));
+    tween(hotspot[newspot].atv,get('view.vlookat'));
+    set(update,hotspot[newspot]);
+  </action>
+  <action name="loadxml" about="系统事件谨慎修改,加载XML及设置属性">
+    set(plugin[%1].x,%3);
+    set(plugin[%1].y,%4);
+    set(plugin[radar].x,%3);
+    set(plugin[radar].y,%4);
+    loadpano(%2,null,KEEPALL,BLEND(2));
+    set(plugin[radar].heading,10);
+  </action>
+  <action name="update_map_spot" about="系统事件谨慎修改,更新地图锚点">
+    plugin[map].activatespot(%1);
+    plugin[map].pantospot(%1);
+  </action>
+
+  <action name="load_korfustadt_altefestung" about="系统事件谨慎修改更新地图锚点的状态">
+    update_map_spot(%2);
+    loadpano(%1, null, MERGE, BLEND(1));
+  </action>
+
+  <action name="load_korfustadt_altefestung_oben" about="系统事件谨慎修，改更新地图锚点的状态">
+    update_map_spot(%2);
+    loadpano(%1, null, MERGE, BLEND(1));
+  </action>
+  <action name="loadpano" about="系统事件谨慎修，改加载全景">
+    loadpano(%SWFPATH%/%1, null, MERGE, BLEND(1));
+  </action>
+  <action name="menu_show" about="系统事件谨慎修，改显示隐藏插件">
+    tween(plugin[menu].y,67,distance(700,3),linear);
+    set(plugin[thumbnails].visible,true);
+    tween(plugin[thumbnails].y,0,distance(700,3),linear);
+  </action>
+  <action name="menu_hide" about="系统事件谨慎修改，隐藏插件">
+    tween(plugin[menu].y,0,distance(700,3),linear);
+    tween(plugin[thumbnails].y,-75,distance(700,3),linear);
+    tween(plugin[fullscreen].y,-75,distance(700,3),linear);
+  </action>
+  <action name="hide_onstart" about="隐藏图片列表">
+    set(plugin[thumbnails].visible,false);
+    set(plugin[thumbnails].y,-67);
+  </action>
+  <textstyle name="smalltext" font="Arial" fontsize="12" bold="false"  border="false"  background="false" textcolor="0x000000" alpha="1" textalign="bottom"  xoffset="" yoffset="" effect="glow(0xffffff,0.7,4,2);dropshadow(2,45,0xffffff,3,1);" />
+  <action name="showpic" about="显示一张图片，点击图片后隐藏">
+    addplugin(picmode);set(plugin[picmode].url,%1);set(plugin[picmode].enable,true);set(plugin[picmode].visible,true);set(plugin[picmode].align,center);set(plugin[picmode].zorder,100);
+    set(plugin[picmode].scale,%2);
+    tween(plugin[picmode].alpha, 1, 0.50);set(plugin[picmode].onclick,action(hidepic,picmode));
+  </action>
+  <action name="hidepic" about="隐藏图片">
+    tween(plugin[%1].alpha, 0, 0.25 );removeplugin(%1);
+  </action>
+  <action name="closemap" about="关闭地形图">
+    set(onclick,action(openmap););
+    tween(width,64,distance(320,0.5),easeoutquad);
+    tween(height,45,distance(227,0.5),easeoutquad);
+  </action>
+  <action name="openmap" about="打开结构图">
+    set(onclick,action(closemap););
+    tween(width,320,distance(320,0.5),easeoutquad);
+    tween(height,227,distance(227,0.5),easeoutquad);
+  </action>
+  <action name="activatespot" about="关联地图锚点">
+    copy(plugin[spotx].x, plugin[%1].x);
+    copy(plugin[spotx].y, plugin[%1].y);
+    copy(plugin[radar].x, plugin[%1].x);
+    copy(plugin[radar].y, plugin[%1].y);
+    loadpano(%2,null,KEEPALL,BLEND(2));
+    set(plugin[radar].heading, 60);
+
+  </action>
+  <action name="playtourbksound" about="播放背景音乐或解说">
+
+    if(soundinterface.mute== false,
+    set(soundinterface.mute,true);,
+    set(soundinterface.mute,false););
+    playsound(%1,%2,1,payStopSound());
+  </action>
+  <action name="StopAllSound" about="停止放背景音乐或解说">
+    stopallsounds();
+    set(soundinterface.mute,true);
+
+  </action>
+  <action name="payStopSound" about="播放背景音乐或解说之后">
+    set(crop,get(plugin[snd].crop));
+    if(crop=='0|0|50|50',
+    set(plugin[snd].crop,'0|50|50|50');
+    set(soundinterface.mute,true););
+  </action>
+  <action name="timers" about="计时器">
+    set(tempTime,%1);
+    add(tempTime,1);
+    delayedcall(skipPano,1,timers(get(tempTime)));
+    if(tempTime==2,stopdelayedcall(skipPano);set(bt,0);nextscene();,);
+  </action>
+  <action name="nextscene" about="跳转下一场景">
+    set(hotspotCount,0);
+    set(isFirstB,get(data[isFirstPlay].content));
+    set(dire,get(view.hlookat));
+    mod(dire,360);
+    add(dire,360);
+    mod(dire,360);
+    set(mindis,0);
+    set(linkPano,"");
+    for(set(i,0), i LT hotspot.count, inc(i),
+    if(hotspot[get(i)].style=="streetview_gotopano",
+    add(hotspotCount,1);
+    if(isFirstB==false,
+    if(i==0,
+    add(a,get(hotspot[get(i)].direction),360);
+    mod(a,360);
+    sub(mindis,get(a),dire);
+    Math.abs(mindis);
+    set(linkPano,get(hotspot[get(i)].linkedpano));
+    ,
+    add(a,get(hotspot[get(i)].direction),360);
+    mod(a,360);
+    sub(m,get(a),dire);
+    Math.abs(m);
+    if(m LT mindis,
+    set(mindis,get(m));
+    set(linkPano,get(hotspot[get(i)].linkedpano));
+    );
+    );
+    );
+    );
+    );
+    if(linkPano!="",
+    gotopano(get(linkPano));,
+    if(hotspotCount GT 2,
+    ,
+    for(set(i,0), i LT hotspot.count, inc(i),
+    if(hotspot[get(i)].style=="streetview_gotopano",
+    set(current,get(hotspot[get(i)].linkedpano));
+    set(preLinsPano,get(data[globalPreLinksPano].content));
+    if(current != preLinsPano,
+    gotopano(get(hotspot[get(i)].linkedpano));
+    set(i,hotspot.count);
+    );
+    );<!--end if-->
+    );<!--end for-->
+    );<!-- end if-->
+    );
+  </action>
+  <!--记录上一个全景点的名称-->
+  <data name="globalCurUrl"></data>
+  <data name="globalPreLinksPano"></data>
+  <data name="globalAutoPlay"></data>
+  <data name="isFirstPlay"></data>
+</krpano>

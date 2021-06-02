@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字北京红色地标</title>
+    <link rel="stylesheet" href="period font.css">
+    <script src="script/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="script/Cesium/Widgets/widgets.css">
+    <style>
+        body {
+            background-color:black;
+        }
+        .topbox {
+            position: absolute;
+            left:0;
+            height: 12%;
+            right: 0;;
+            top:0;
+            background-color: black;
+
+        }
+        .logobox {
+            position: absolute;
+            left:0;
+            height:12%;
+            top:0;
+            width: 200px;
+
+            
+        }
+        /* .logobox img {
+            position: absolute;
+            left:0;
+            top:0;
+            right: 0;
+            botto:0;
+        } */
+        .wenzibox {
+            position: absolute;
+            left:300px;
+            top:0;
+            height: 12%;
+
+        }
+        .nav {
+            margin-top: 9%;
+            margin-left: 9%;
+            margin-right: 0;
+        }
+        #cesiumcontainer {
+            position:absolute;
+            right:0;
+            top:100px;
+            height:700px;
+            left:9%;
+            background: url('./img/team.png') no-repeat center 12px;
+
+        }
+        
+        .right {
+            position: absolute;
+            top: 30%;
+            right: 0px;
+            height: 280px;
+            width: 130px;
+            background-color: #fff;
+            z-index: 97;
+            border-radius: 10px;
+
+            
+        }
+        #jiantou {
+            position: absolute;
+            display: inline-block;
+            border-radius: 10px;
+            top:45%;
+            width: 30px;
+            height: 40px;
+            right:130px;
+            background-color: #fff;
+            font-size: 15px;
+            z-index:80;
+        }
+        .period {
+            position:absolute;
+            left:0;
+            width:9%;
+        }
+        /* .period div{
+            margin-top:20px;
+            height: 100px;
+            width: 70px;
+        } */
+        .right a{
+
+            display: block;
+            width:130px;
+            height: 80px;
+            background-color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 25px;
+            line-height: 80px;
+            color:lightgrey;
+        }
+        .right #teamintroduction{
+            position: absolute;
+            top:15px;
+        }
+        .right #wechat {
+            position: absolute;
+            top:95px;
+        }
+        .right #weibo {
+            position:absolute;
+            top:175px;
+        }
+
+    .right a:hover {
+        background-color:maroon;
+    }
+    .imgdiv{
+        display: none;
+        position: absolute;
+        top:50%;
+        height: 93px;
+        width: 94px;
+        z-index: 99;
+        right:130px;
+    }
+    
+    </style>
+      
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class ="topbox">
+        <!-- logobox -->
+        <div class = "logobox">
+            <img src="./红色地标/logo.png" alt="">
+        </div>
+        <div class = "wenzibox">
+            <img src="/img/wenzi.png" alt="">
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class = "nav">
+
+        <!-- 右侧悬浮栏 -->
+        <div class = "right">
+            <a href="团队介绍.html" target="_blank" id = "teamintroduction">团队介绍</a>
+            <a href="#"  id = "wechat">官方微信</a>
+            <a href="#" id = "weibo">官方微博</a>
+            <!-- 箭头 -->
+            <span id = "jiantou"><img src="./img/jiantou.png" alt=""id = "jiantouimg"></span></div>
+        <!-- 官方微信微博 -->
+        <div class = "imgdiv"><img src="" alt="" id ="wechatimg"></div>
+        <!-- 不同时期 -->
+        <div class ="period">
+            <p><a href="#" id = "first">新民主义革命</a></p>
+            <p><a href="#" id = "second">社会主义革命</a></p>
+            <p><a href="#" id ="third">改革开放时期</a></p>
+            <p><a href="#" id="forth">社会主义新时代</a></p>
+        </div>
+        <!-- 地球 -->
+        <div id="cesiumcontainer" class = "nav1"></div>
+
+    </div>
+    <!-- 三维地球 -->
+    <script>
+
+
+    var viewer = new Cesium.Viewer('cesiumcontainer',{
+        geocoder:false,
+        homeButton:false,
+        sceneModePicker:false,
+        baseLayerPicker:false,
+        navigationHelpButton:false,
+        animation:false,
+        timeline:false,
+        fullscreenButton:false,
+        vrButton:false,
+        selectionIndicator:false    // 是否可以选中
+ 
+    });
+        
+
+
+
+    //飞到北京上空
+        viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(116.30, 39.958, 130000), //摄像机的最终位置
+            duration: 4,                           //飞行所用时间
+            maximumHeight: 30000,                  //飞行高峰时的最大高度。
+            pitchAdjustHeight: 1500,               //如果摄像机的飞行高于此值，请调整俯仰航向以降低俯仰，并将地球保持在视野中
+            // orientation: {
+            //     heading: opt.heading, //方位角
+            //     pitch: opt.pitch,  //倾角
+            //     roll: opt.roll     //旋转角
+            // }
+        });
+
+        //地标点位显示
+
+        //宛平城
+        var wanpingcheng = viewer.entities.add({
+            name: 'wanpingcheng',
+            position: Cesium.Cartesian3.fromDegrees(116.220, 39.849),
+            label: {
+                text: '宛平城',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                    billboard : { //图标
+                image : '/img/yellow.png',
+                width : 45,
+                height : 45
+            },
+        });
+        //天安门
+        var tiananmen = viewer.entities.add({
+            name: 'tiananmen',
+            position: Cesium.Cartesian3.fromDegrees(116.3907, 39.9077),
+            label: {
+                text: '天安门广场',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                    billboard : { //图标
+                image : '/img/blue.png',
+                width : 45,
+                height : 45
+            },
+        });
+        //香山双清别墅
+        var shuangqing = viewer.entities.add({
+            name: 'shuangqing',
+            position: Cesium.Cartesian3.fromDegrees(116.198, 39.986),
+            label: {
+                text: '双清别墅',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                    billboard : { //图标
+                image : '/img/red.png',
+                width : 45,
+                height : 45
+            },
+        });
+        //平北抗日纪念馆
+            var pingbei = viewer.entities.add({
+            name: 'pingbei',
+            position: Cesium.Cartesian3.fromDegrees(116.006, 40.5351),
+            label: {
+                text: '平北抗日纪念馆',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                    billboard : { //图标
+                image : '/img/yellow.png',
+                width : 45,
+                height :45
+            },
+        });
+        //北大红楼
+        var honglou = viewer.entities.add({
+            name: 'honglou',
+            position: Cesium.Cartesian3.fromDegrees(116.3988, 39.9233),
+            label: {
+                text: '北大红楼',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                    billboard : { //图标
+                image : '/img/red.png',
+                width : 45,
+                height : 45
+            },
+        });
+
+        //清源公园
+        var qingyuan = viewer.entities.add({
+            name: 'qingyuan',
+        position: Cesium.Cartesian3.fromDegrees(116.296, 39.7328),
+            label: {
+                text: '清源公园',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                    billboard : { //图标
+                image : '/img/green.png',
+                width : 45,
+                height : 45
+            },
+        });
+        //蔡元培纪念馆坐标
+        var caiyuanpeijinianguan = viewer.entities.add({
+            name: 'caiyuanpeijinianguan',
+            position: Cesium.Cartesian3.fromDegrees(116.4135, 39.913),
+            label: {
+                text: '蔡元培纪念馆 ',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+                billboard : { //图标
+                image : '/img/red.png',
+                width : 45,
+                height : 45
+            },
+        });
+ //没有共产党就没有新中国纪念馆
+ var gongchandang = viewer.entities.add({
+            name: 'gongchandang',
+            position: Cesium.Cartesian3.fromDegrees(115.9720, 39.83),
+            label: {
+                text: '没有共产党就没有新中国纪念馆',
+                font: '10pt monospace',
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                outlineWidth: 2,
+                //垂直位置
+                verticalOrigin: Cesium.VerticalOrigin.BUTTON,
+                //中心位置
+                pixelOffset: new Cesium.Cartesian2(0, 20)
+            },
+            billboard : { //图标
+                image : '/img/blue.png',
+                width : 45,
+                height : 45
+            },
+        });
+
+
+
+    //监听鼠标点击事件
+    let handler = new Cesium.ScreenSpaceEventHandler (viewer.scene.canvas);
+    handler.setInputAction((movement) => {
+    //movement.position鼠标点击的屏幕的位置（x,y）
+    // let primitive = viewer.scene.pick(movement.position);//获取当前点击元素
+    // let id = primitive.id;//获取当前点击实体（entity.....）
+      let Cartesian3 = viewer.scene.globe.pick(viewer.camera.getPickRay(movement.position),viewer.scene);
+    if(Cartesian3){//转换经纬度
+      let cartographic = Cesium.Cartographic.fromCartesian(Cartesian3);
+     let  lon = Cesium.Math.toDegrees(cartographic.longitude);
+     let lat = Cesium.Math.toDegrees(cartographic.latitude);
+     //打开宛平城
+    if (lon>=116.2 && lon <= 116.25 && lat >= 39.7 && lat<=39.9)
+    {
+        
+        window.location.href = "/宛平全景/wanping/Start.html";
+    }else if(lon>=116.39 && lon <=116.40 && lat >= 39.90 && lat <= 39.95) {
+        //天安门
+        window.location.href = "www.baid1u.com";
+
+    }
+    else if(lon>=116.39 && lon<=116.40&&lat>=39.9&&lat<=40.0 ){
+        //香山双清别墅
+        window.location.href='www.baidu.com';
+        
+    }
+    else if(lon>=116 && lon <=116.01 && lat >=40.5 && lon<=40.55) {
+        //平北抗日纪念馆
+        window.location.href='www.baidu.com';
+
+    }
+    else if(lon >= 116.39&&lon<=116.40 && lat >=39.9 && lat <=39.95){
+        //北大红楼
+        window.location.href='www.bai2u.com';
+
+    }
+    else if (lon >=116.29 && lon <=116.30 && lat >=39.7 && lat <=39.78){
+        //清源公园
+        window.location.href='www.baidu.com';
+    }
+    else if (lon >= 116.4 && lon <= 116.48 && lat >=39.9 && lat <=39.95){
+        //蔡元培纪念馆
+        window.location.href='www.baid3u.com';
+    }
+    else if (lon >= 115.9 && lon <=115.99 && lat >=39.8 && lat <=39.86){
+        //没有共产党就没有新中国
+        window.location.href='www.baidu.com';
+        
+    }
+    }
+
+    
+
+},Cesium.ScreenSpaceEventType.LEFT_CLICK)
+
+    </script>
+    <!-- 右侧悬浮栏 -->
+    <script>
+        
+        var number = 1;
+        //悬浮栏收起事件
+        var stopEle = document.querySelector('#jiantou');
+        stopEle.onclick= function(){
+            if (number %2 !=0){
+            packUp(-130);
+            number += 1;}
+            else{
+                Out(0);
+                number +=1;
+            }
+
+        }
+
+
+        //悬浮栏收起函数
+        function packUp(width)
+        {
+            var rightEle=document.querySelector('.right'); 
+            rightEle.style.right=width + 'px';
+            document.querySelector('#jiantouimg').src='/img/youjiantou.png';
+        }
+        //悬浮栏弹出函数
+        function Out(width)
+        {
+            var rightEle=document.querySelector('.right'); 
+            rightEle.style.right=width + 'px';
+            document.querySelector('#jiantouimg').src='/img/jiantou.png';
+        }
+    </script>
+    <!-- 微博与微信 -->
+    <script>
+        var wechatEle = document.querySelector('#wechat');
+        wechatEle.onmouseover = function (){
+            var imgEle = document.querySelector('#wechatimg');
+            var imgboxEle = document.querySelector('.imgdiv');
+            imgEle.src="./img/wechat.jpg";
+            imgboxEle.style.display = "block";
+            
+        }
+        wechatEle.onmouseleave = function() {
+            var imgEle = document.querySelector('#wechatimg');
+            imgEle.src = "";
+            imgboxEle.style.display = "none";
+        }
+    </script>
+
+
+    <!-- 左侧时期对应功能 -->
+    <script>
+        var firstEle = document.querySelector('#first');
+        firstEle.onclick = function() {
+            shuangqing.label.show=true;
+            shuangqing.billboard.show=true;
+            honglou.billboard.show=true;
+            honglou.label.show=true;
+            caiyuanpeijinianguan.label.show=true;
+            caiyuanpeijinianguan.billboard.show=true;
+            wanpingcheng.label.show = false;
+            wanpingcheng.billboard.show=false;
+            tiananmen.label.show=false;
+            tiananmen.billboard.show=false;
+            qingyuan.label.show=false;
+            qingyuan.billboard.show=false;
+            gongchandang.label.show=false;
+            gongchandang.billboard.show=false;
+            pingbei.label.show=false;
+            pingbei.billboard.show=false;
+        }
+        var secondEle = document.querySelector('#second');
+        secondEle.onclick = function(){
+            gongchandang.label.show=true;
+            gongchandang.billboard.show=true;
+            tiananmen.label.show=true;
+            tiananmen.billboard.show=true;
+            pingbei.label.show=false;
+            pingbei.billboard.show=false;
+            shuangqing.billboard.show=false;
+            shuangqing.label.show=false;
+            wanpingcheng.label.show=false;
+            wanpingcheng.billboard.show=false;
+            qingyuan.billboard.show=false;
+            qingyuan.label.show=false;
+            honglou.billboard.show=false;
+            honglou.label.show=false;
+            caiyuanpeijinianguan.label.show=false;
+            caiyuanpeijinianguan.billboard.show=false;
+        }
+        var thirdEle = document.querySelector('#third');
+        thirdEle.onclick = function () { 
+            pingbei.billboard.show=true;
+            pingbei.label.show=true;
+            wanpingcheng.label.show=true;
+            wanpingcheng.billboard.show=true;
+            tiananmen.label.show=false;
+            tiananmen.billboard.show=false;
+            qingyuan.billboard.show=false;
+            qingyuan.label.show=false;
+            honglou.label.show=false;
+            honglou.billboard.show=false;
+            caiyuanpeijinianguan.label.show=false;
+            caiyuanpeijinianguan.billboard.show=false;
+            gongchandang.label.show=false;
+            gongchandang.billboard.show=false;
+            shuangqing.label.show=false;
+            shuangqing.billboard.show=false;
+
+         }
+         var forthEle = document.querySelector('#forth');
+         forthEle.onclick = function(){
+             wanpingcheng.label.show=false;
+             wanpingcheng.billboard.show=false;
+             qingyuan.label.show=true;
+             qingyuan.billboard.show=true;
+            honglou.label.show=false;
+            honglou.billboard.show=false;
+            caiyuanpeijinianguan.label.show=false;
+            caiyuanpeijinianguan.billboard.show=false;
+            gongchandang.label.show=false;
+            gongchandang.billboard.show=false;
+            shuangqing.label.show=false;
+            shuangqing.billboard.show=false;
+            tiananmen.label.show=false;
+            tiananmen.billboard.show=false;
+            pingbei.billboard.show=false;
+            pingbei.label.show=false;
+         }
+
+
+
+
+    </script>
+</body>
+
+</html>

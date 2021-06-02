@@ -1,0 +1,13 @@
+﻿<krpano>
+   <plugin name="right_bar2" url="%SWFPATH%/plugins/videoplayer.swf" alturl="%SWFPATH%/plugins/videoplayer.js" keep="false" align="center" edge="center" x="0" y="0" blendmode="normal" visible="false" zorder="16" loop="false" voiume="1.0" buffertime="0.1" />
+
+  <plugin name="right_close" url="closebutton.png" parent="right_bar2" keep="false" align="righttop" edge="righttop" x="2" y="2" zorder="17" alpha="0.9" enabled="true" handcursor="false" blendmode="normal" onclick="plugin[right_bar2].stop();set(plugin[right_bar2].visible,false)"/>
+  
+  <action name="addhotspotvideo" about="为热点热区鼠标事件添加视频">
+    set(plugin[right_bar2].videourl,%1);
+    set(plugin[right_bar2].visible,true);
+	  set(plugin[right_close].visible,true);
+    plugin[right_bar2].playvideo(%1);
+  </action>
+
+</krpano>

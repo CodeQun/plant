@@ -1,0 +1,204 @@
+.topbox {
+  position: absolute;
+  left:0;
+  height: 12%;
+  right: 0;;
+  top:0;
+  background-color: black;
+  z-index: 1;
+
+}
+.wenzibox {
+  position: absolute;
+  left:300px;
+  top:0;
+  height: 12%;
+
+}
+.logobox {
+  position: absolute;
+  left:0;
+  height:12%;
+  top:0;
+  width: 200px;
+
+  
+}
+.topbox #shouye {
+  display: inline-block;
+  position: absolute;
+  top:0;
+  bottom: 0;;
+  left:900px;
+  width: 100px;
+  background-color:gray;
+  text-align: center;
+
+}
+.topbox #quanjing {
+  display: inline-block;
+  position:absolute;
+  top:0;
+  left:1000px;
+  bottom: 0;
+  width: 100px;
+  background-color:gray;
+  text-align: center;
+
+}
+.topbox #lishi {
+  display: inline-block;
+  position:absolute;
+  top:0;
+  left:1100px;
+  bottom: 0;
+  width: 100px;
+  background-color:darkred;
+  color:goldenrod;
+  text-align: center;
+
+}
+.topbox #daohang {
+  display: inline-block;
+  position:absolute;
+  top:0;
+  left:1200px;
+  bottom: 0;
+  width: 100px;
+  background-color:gray;
+  text-align: center;
+
+}
+.topbox #liuyan {
+  display: inline-block;
+  position:absolute;
+  top:0;
+  left:1300px;
+  bottom: 0;
+  width: 100px;
+  background-color:gray;
+  text-align: center;
+
+}
+.topbox a {
+  display: inline-block;
+  position: absolute;
+  padding-top: 30%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100px;
+  font-size: 25px;
+  font-family: "楷体";
+  text-decoration: none;
+  color: azure;
+}
+.topbox a:hover {
+  background-color: darkred;
+  color: goldenrod;
+}
+.image {
+  position: absolute;
+  left: 0;
+  height: 100px;
+  top: 88px;
+  right: 0;
+  background-color: blue;
+}
+.jianjie {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  height: 3500px;
+  background-color: rgb(230, 190, 190);
+  font-family: "楷体";
+  font-size: 24px;
+}
+#font {
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 40px;
+  font-family: "微软雅黑";
+}
+
+
+
+
+.pic1 {
+  position: absolute;
+  display: inline-block;
+  height: 300px;
+  top: 0px;
+
+  width: 100%;
+}
+.wenzi {
+  position: absolute;
+  left: 200px;
+  right: 200px;
+  font-family: "楷体";
+  font-size: 30px;
+}
+.pic234 {
+  position: absolute;
+  display: inline-block;
+  height: 100px;
+  top: 1000px;
+
+  width: 100%;
+}
+.lie-content-top-img{
+  width: 34.41%;
+  margin-right: 6.13%;
+  position: relative;
+
+}
+.pic2 {
+  position: absolute;
+  height: 250px;
+  top: 750px;
+  left: 250px;
+  right: 1375px;  
+  background-color: rgb(131, 42, 248);
+}
+.pic3 {
+  position: absolute;
+  height: 250px;
+  top: 750px;
+  left: 800px;
+  right: 800px;
+  background-color: rgb(131, 42, 248);
+}
+ .pic4 {
+    position: absolute;
+    height: 250px;
+    top: 750px;
+    left: 1375px;
+    right: 250px;
+    background-color: rgb(131, 42, 248);
+  }
+  .tuwen{
+    position: absolute;
+    height: 500px;
+    top: 2300px;
+    left: 0;
+    right: 0;  
+    
+  }
+  .tupian{
+    position: absolute;
+    height: 500px;
+    left: 200px;
+    right: 1200px;  
+    background-color: rgb(202, 247, 118);
+  }.peizi{
+    position: absolute;
+    height: 500px;
+    left: 1000px;
+    right: 200px;  
+    background-color: rgb(128, 226, 188);
+  }
+

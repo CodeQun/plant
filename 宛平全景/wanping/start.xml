@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<krpano xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" onstart="startup();">
+  <include url="skin/vtourskin.xml" />
+  <include url="skin/info/info.xml" />
+  <include url="skin/publicxml.xml" />
+  <include url="skin/krpanocommons_debug.xml" />
+  <scene name="scene_20210420215907000001" title="宛平城" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420215907000001/20210420215907000001.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420215907000001/20210420215907000001.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420215907000001/20210420215907000001.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420215907000001/20210420215907000001.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420215907000001/20210420215907000001.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420215907000001/20210420215907000001.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="宛平城西南门" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="-82.38" atv="1.62" distorted="true" rx="0.00" ry="0.00" rz="10.57" alpha="1.0" scale="0.36" onloaded="" onclick="loadscene(scene_20210420215911000002,null,MERGE)" onover="showtext(宛平城西南门)" onhover="showtext(宛平城西南门)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420215911000002" title="宛平城西南门" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420215911000002/20210420215911000002.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420215911000002/20210420215911000002.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420215911000002/20210420215911000002.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420215911000002/20210420215911000002.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420215911000002/20210420215911000002.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420215911000002/20210420215911000002.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="城内街" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="262.69" atv="1.16" distorted="true" rx="0.00" ry="0.00" rz="14.67" alpha="1.0" scale="0.34" onloaded="" onclick="loadscene(scene_20210420220114000010,null,MERGE)" onover="showtext(城内街)" onhover="showtext(城内街)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220114000010" title="城内街" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420220114000010/20210420220114000010.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220114000010/20210420220114000010.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220114000010/20210420220114000010.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220114000010/20210420220114000010.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220114000010/20210420220114000010.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220114000010/20210420220114000010.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="中国人民抗日战争纪念馆" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="171.84" atv="4.33" distorted="true" rx="0.00" ry="0.00" rz="-54.97" alpha="1.0" scale="0.37" onloaded="" onclick="loadscene(scene_20210420220253000012,null,MERGE)" onover="showtext(中国人民抗日战争纪念馆)" onhover="showtext(中国人民抗日战争纪念馆)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220253000012" title="中国人民抗日战争纪念馆正门" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420220253000012/20210420220253000012.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220253000012/20210420220253000012.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220253000012/20210420220253000012.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220253000012/20210420220253000012.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220253000012/20210420220253000012.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220253000012/20210420220253000012.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="卢沟醒狮" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="-57.72" atv="1.66" distorted="true" rx="0.00" ry="0.00" rz="0.85" alpha="1.0" scale="0.31" onloaded="" onclick="loadscene(scene_20210420220316000014,null,MERGE)" onover="showtext(卢沟醒狮)" onhover="showtext(卢沟醒狮)" onout="" />
+    <hotspot name="中国人民抗日战争纪念馆正门" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="116.38" atv="5.07" distorted="true" rx="0.00" ry="0.00" rz="-17.90" alpha="1.0" scale="0.34" onloaded="" onclick="loadscene(scene_20210420220559000020,null,MERGE)" onover="showtext(中国人民抗日战争纪念馆正门)" onhover="showtext(中国人民抗日战争纪念馆正门)" onout="" />
+    <hotspot name="城内街" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="215.94" atv="4.01" distorted="true" rx="0.00" ry="0.00" rz="24.94" alpha="1.0" scale="0.25" onloaded="" onclick="loadscene(scene_20210420220508000016,null,MERGE)" onover="showtext(城内街)" onhover="showtext(城内街)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220316000014" title="卢沟醒狮" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420220316000014/20210420220316000014.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220316000014/20210420220316000014.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220316000014/20210420220316000014.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220316000014/20210420220316000014.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220316000014/20210420220316000014.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220316000014/20210420220316000014.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220559000020" title="中国人民抗日战争纪念馆正门" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420220559000020/20210420220559000020.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220559000020/20210420220559000020.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220559000020/20210420220559000020.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220559000020/20210420220559000020.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220559000020/20210420220559000020.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220559000020/20210420220559000020.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="中国人民抗日战争纪念馆馆内" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="188.45" atv="5.69" distorted="true" rx="0.00" ry="0.00" rz="-43.48" alpha="1.0" scale="0.39" onloaded="" onclick="loadscene(scene_20210420220731000022,null,MERGE)" onover="showtext(中国人民抗日战争纪念馆馆内)" onhover="showtext(中国人民抗日战争纪念馆馆内)" onout="" />
+    <hotspot name="中国人民抗日战争纪念馆入口" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="-69.96" atv="0.54" distorted="true" rx="0.00" ry="0.00" rz="7.25" alpha="1.0" scale="0.17" onloaded="" onclick="loadscene(scene_20210420220516000017,null,MERGE)" onover="showtext(中国人民抗日战争纪念馆入口)" onhover="showtext(中国人民抗日战争纪念馆入口)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220731000022" title="中国人民抗日战争纪念馆馆内" onstart="stopallsounds();" thumburl="vtour/panos/20210420220731000022/20210420220731000022.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220731000022/20210420220731000022.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220731000022/20210420220731000022.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220731000022/20210420220731000022.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220731000022/20210420220731000022.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220731000022/20210420220731000022.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220508000016" title="城内街" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420220508000016/20210420220508000016.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220508000016/20210420220508000016.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220508000016/20210420220508000016.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220508000016/20210420220508000016.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220508000016/20210420220508000016.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220508000016/20210420220508000016.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="城内街" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="31.45" atv="-0.23" distorted="true" rx="0.00" ry="0.00" rz="-2.65" alpha="1.0" scale="0.44" onloaded="" onclick="loadscene(scene_20210420220919000026,null,MERGE)" onover="showtext(城内街)" onhover="showtext(城内街)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220516000017" title="中国人民抗日战争纪念馆入口" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210420220516000017/20210420220516000017.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220516000017/20210420220516000017.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220516000017/20210420220516000017.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220516000017/20210420220516000017.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220516000017/20210420220516000017.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220516000017/20210420220516000017.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220919000026" title="城内街" onstart="stopallsounds();" thumburl="vtour/panos/20210420220919000026/20210420220919000026.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220919000026/20210420220919000026.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220919000026/20210420220919000026.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220919000026/20210420220919000026.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220919000026/20210420220919000026.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220919000026/20210420220919000026.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="顺治门" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="170.45" atv="2.11" distorted="true" rx="0.00" ry="0.00" rz="-31.62" alpha="1.0" scale="0.34" onloaded="" onclick="loadscene(scene_20210420220949000002,null,MERGE)" onover="showtext(顺治门)" onhover="showtext(顺治门)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420221003000003" title="东门" onstart="stopallsounds();" thumburl="vtour/panos/20210420221003000003/20210420221003000003.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420221003000003/20210420221003000003.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420221003000003/20210420221003000003.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420221003000003/20210420221003000003.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420221003000003/20210420221003000003.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420221003000003/20210420221003000003.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210420220949000002" title="顺治门" onstart="stopallsounds();" thumburl="vtour/panos/20210420220949000002/20210420220949000002.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210420220949000002/20210420220949000002.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2608" tiledimageheight="2608">
+        <cube url="vtour/panos/20210420220949000002/20210420220949000002.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1304" tiledimageheight="1304">
+        <cube url="vtour/panos/20210420220949000002/20210420220949000002.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="652" tiledimageheight="652">
+        <cube url="vtour/panos/20210420220949000002/20210420220949000002.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210420220949000002/20210420220949000002.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="东门" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="99.45" atv="8.76" distorted="true" rx="0.00" ry="0.00" rz="-18.72" alpha="1.0" scale="0.43" onloaded="" onclick="loadscene(scene_20210420221003000003,null,MERGE)" onover="showtext(东门)" onhover="showtext(东门)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <control mousetype="drag2d" />
+</krpano>

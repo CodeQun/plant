@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<krpano xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" onstart="startup();">
+  <include url="skin/vtourskin.xml" />
+  <include url="skin/info/info.xml" />
+  <include url="skin/publicxml.xml" />
+  <include url="skin/krpanocommons_debug.xml" />
+  <scene name="scene_20210427151703000001" title="大兴烈士纪念广场入口" onstart="stopallsounds();" thumburl="vtour/panos/20210427151703000001/20210427151703000001.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151703000001/20210427151703000001.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151703000001/20210427151703000001.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151703000001/20210427151703000001.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151703000001/20210427151703000001.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151703000001/20210427151703000001.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="烈士纪念广场入口北道" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="104.25" atv="1.22" distorted="true" rx="0.00" ry="0.00" rz="-2.09" alpha="1.0" scale="0.23" onloaded="" onclick="loadscene(scene_20210427151403000001,null,MERGE)" onover="showtext(烈士纪念广场入口北)" onhover="showtext(烈士纪念广场入口北)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210427151403000001" title="烈士纪念广场入口北道" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210427151403000001/20210427151403000001.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151403000001/20210427151403000001.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151403000001/20210427151403000001.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151403000001/20210427151403000001.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151403000001/20210427151403000001.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151403000001/20210427151403000001.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="烈士纪念广场北" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="269.20" atv="3.51" distorted="true" rx="0.00" ry="0.00" rz="-22.53" alpha="1.0" scale="0.23" onloaded="" onclick="loadscene(scene_20210427151407000002,null,MERGE)" onover="showtext(烈士纪念广场北)" onhover="showtext(烈士纪念广场北)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210427151407000002" title="烈士纪念广场北" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210427151407000002/20210427151407000002.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151407000002/20210427151407000002.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151407000002/20210427151407000002.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151407000002/20210427151407000002.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151407000002/20210427151407000002.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151407000002/20210427151407000002.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="烈士纪念广场中央" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="209.10" atv="3.57" distorted="true" rx="0.00" ry="0.00" rz="29.24" alpha="1.0" scale="0.34" onloaded="" onclick="loadscene(scene_20210427151731000004,null,MERGE)" onover="showtext(烈士纪念广场中央)" onhover="showtext(烈士纪念广场中央)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210427151731000004" title="烈士纪念广场中央" onstart="stopallsounds();" thumburl="vtour/panos/20210427151731000004/20210427151731000004.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151731000004/20210427151731000004.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151731000004/20210427151731000004.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151731000004/20210427151731000004.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151731000004/20210427151731000004.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151731000004/20210427151731000004.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="烈士纪念广场东侧" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="27.28" atv="4.53" distorted="true" rx="0.00" ry="0.00" rz="-1.62" alpha="1.0" scale="0.34" onloaded="" onclick="loadscene(scene_20210427151415000004,null,MERGE)" onover="showtext(烈士纪念广场东侧)" onhover="showtext(烈士纪念广场东侧)" onout="" />
+    <hotspot name="烈士纪念广场西侧" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="106.24" atv="5.63" distorted="true" rx="0.00" ry="0.00" rz="-10.90" alpha="1.0" scale="0.32" onloaded="" onclick="loadscene(scene_20210427151703000006,null,MERGE)" onover="showtext(烈士纪念广场西侧)" onhover="showtext(烈士纪念广场西侧)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210427151415000004" title="烈士纪念广场东侧" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210427151415000004/20210427151415000004.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151415000004/20210427151415000004.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151415000004/20210427151415000004.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151415000004/20210427151415000004.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151415000004/20210427151415000004.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151415000004/20210427151415000004.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="烈士纪念广场南侧" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="256.56" atv="7.21" distorted="true" rx="0.00" ry="0.00" rz="10.73" alpha="1.0" scale="0.31" onloaded="" onclick="loadscene(scene_20210427151421000005,null,MERGE)" onover="showtext(烈士纪念广场南侧)" onhover="showtext(烈士纪念广场南侧)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210427151421000005" title="烈士纪念广场南侧" onstart="stopallsounds();StopAllSound();" thumburl="vtour/panos/20210427151421000005/20210427151421000005.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151421000005/20210427151421000005.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151421000005/20210427151421000005.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151421000005/20210427151421000005.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151421000005/20210427151421000005.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151421000005/20210427151421000005.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <scene name="scene_20210427151703000006" title="烈士纪念广场西侧" onstart="stopallsounds();" thumburl="vtour/panos/20210427151703000006/20210427151703000006.tiles/thumb.jpg" lat="" lng="" heading="">
+    <preview url="vtour/panos/20210427151703000006/20210427151703000006.tiles/preview.jpg" />
+    <image type="CUBE" multires="true" progressive="false" tilesize="512" devices="desktop|tablet">
+      <level tiledimagewidth="2445" tiledimageheight="2445">
+        <cube url="vtour/panos/20210427151703000006/20210427151703000006.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="1223" tiledimageheight="1223">
+        <cube url="vtour/panos/20210427151703000006/20210427151703000006.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+      </level>
+      <level tiledimagewidth="612" tiledimageheight="612">
+        <cube url="vtour/panos/20210427151703000006/20210427151703000006.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+      </level>
+    </image>
+    <image multires="false" progressive="false" tilesize="0" devices="mobile">
+      <mobile>
+        <cube url="vtour/panos/20210427151703000006/20210427151703000006.tiles/mobile_%s.jpg" />
+      </mobile>
+    </image>
+    <include url="skin/video/video.xml" />
+    <hotspot name="烈士纪念广场南侧" olddirection="0" type="hotspot" zoom="true" url="%SWFPATH%/skin/src/hot.png" width="78" height="78" ath="10.51" atv="9.10" distorted="true" rx="0.00" ry="0.00" rz="-0.57" alpha="1.0" scale="0.24" onloaded="" onclick="loadscene(scene_20210427151421000005,null,MERGE)" onover="showtext(烈士纪念广场南侧)" onhover="showtext(烈士纪念广场南侧)" onout="" />
+    <view hlookat="0" vlookat="0" fov="80" fovmin="10" fovmax="120" limitview="range" vlookatmin="-90" vlookatmax="90" />
+    <autorotate enabled="true" waittime="1.50" speed="3" />
+  </scene>
+  <control mousetype="drag2d" />
+</krpano>

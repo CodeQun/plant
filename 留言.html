@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <style>
+        .topbox {
+            position: absolute;
+            left:0;
+            /* 高度改成确定值 */
+            height: 12%;  
+            right: 0;;
+            top:0;
+            background-color: black;
+
+        }
+        #message {
+            position: absolute;
+            top: 12%;
+            border-color:blue;
+            
+        }
+        #button {
+            position: absolute;
+            top: 27%;
+            left:250px;
+
+        }
+        #box {
+            position: absolute;
+            top:30%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class ="topbox">
+        <!-- logobox -->
+        <div class = "logobox">
+            <img src="./红色地标/logo.png" alt="">
+        </div>
+    </div>
+    <textarea name="" id="message" cols="30" rows="10"></textarea>
+    <button id="button">发布</button>
+    <ul id = "box">
+
+    </ul>
+
+    <script>
+        var btn = document.querySelector('#button');
+        var text = document.querySelector('#message');
+        var ul = document.querySelector('ul');
+        btn.onclick = function(){
+            if (text.value != ''){
+            var li = document.createElement('li');
+            ul.insertBefore(li,ul.children[0]);
+            li.innerHTML = text.value;
+            }
+            else{
+                alert('您没有输入内容');
+            }
+        }
+    </script>
+
+</body>
+</html>

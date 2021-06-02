@@ -1,0 +1,245 @@
+<krpano>
+  <!--<plugin name="ga" keep="true"
+    url="%SWFPATH%/plugins/analytics.swf"
+    alturl="%SWFPATH%/plugins/analytics.js"
+    mode="auto"
+    account="UA-26584119-5"
+    prefix="/jcptour"
+    ontrackerready=""
+    parsepaths="true"
+    debug="false"
+    />-->
+  <action name="hsarrowupdate" >
+    div(temphpos,stagewidth,2);
+    mul(hsbotdelta,stageheight,0.13);
+    sub(tempvpos,stageheight,hsbotdelta);
+    screentosphere(temphpos,tempvpos,temphpos,vshift);
+    if(vshift LT view.vlookat,
+    sub(deltavshift,view.vlookat,vshift);
+    add(deltavshift,deltavshift,60);
+    if(deltavshift GT 90, set(deltavshift,90); );
+    sub(vang,deltavshift,get(view.vlookat));
+    copy(vshift,view.vlookat);
+    ,
+    sub(vang,60,get(view.vlookat));
+    );
+
+    for(set(i,0), i LT hotspot.count, inc(i),
+    set(isStreetViewHs,false);
+    if(hotspot[get(i)].style == streetview_gotoscene, set(isStreetViewHs,true); );
+    if(hotspot[get(i)].style == streetview_gotopano, set(isStreetViewHs,true); );
+
+    if(isStreetViewHs,
+    sub(hang,get(view.hlookat),get(hotspot[get(i)].direction));
+    if(prealign not equal NaN,add(hang,prealign));
+    hsarrowtween(get(i),get(view.hlookat),get(vshift));
+
+    copy(hotspot[get(i)].rx,vang);
+    copy(hotspot[get(i)].rz,hang);
+    );
+    );
+  </action>
+
+  <action name="hsarrowtween" >
+    set(hotspot[%1].ath,%2);    
+  </action>
+  <action name="bdarrowupdate">     
+     for(set(i,0), i LT hotspot.count, inc(i),    
+     
+	  <!--判断当前热点是否是跳转热点-->
+     if(hotspot[get(i)].style=="streetview_gotopano",
+	  set(dire,get(hotspot[get(i)].olddirection));
+	   <!--此处判断是否存在olddirection向下兼容-->	 
+	   if(dire !="null",
+	     mod(dire,360);	
+		 Math.abs(dire); 
+		 trace(dire);
+		 if(dire GE 0,
+		    if(dire LE 10,
+			 set(hotspot[get(i)].crop,"0|359|140|210");
+			);<!--end if (dire LE 10)-->		  
+		   );<!--end if(dire GE 0)-->
+		   
+		 if(dire GT 10,
+		   if(dire LT 80,
+		       set(hotspot[get(i)].crop,"700|359|140|210");
+			 );<!-- end if(dire LT 80)-->
+		  );<!--end if(dire GT 10)-->
+		
+		 if(dire GE 80,
+		    if(dire LE 110,
+			   set(hotspot[get(i)].crop,"280|359|140|210");
+			  );<!--end if(dire LE 110)-->
+		  );<!--end if(dire GE 80)-->
+         
+		 if(dire GT 110,
+		    if(dire LT 170,
+			   set(hotspot[get(i)].crop,"560|359|140|210");
+			  );<!--end if(dire LT 170)-->
+		   );<!--end if(dire GT 110)-->
+		   
+		 if(dire GE 170,
+		    if(dire LE 190,
+			    set(hotspot[get(i)].crop,"140|359|140|210");
+			  )<!--end if(dire LE 190)-->
+		   );<!--end if(dire GE 170)-->
+         
+		 if(dire GT 190,
+		     if(dire LT 260,
+			     set(hotspot[get(i)].crop,"840|359|140|210");
+				);<!--end if(dire LT 260)-->
+		   );<!--end if(dire GT 190)-->
+     
+	    if(dire GE 260,
+		   if(dire LE 280,
+		    set(hotspot[get(i)].crop,"420|359|140|210");
+		     );<!--end if(dire LE 280)-->
+		  );<!--end if(dire GE 260)-->
+        if(dire GT 280,
+		  if(dire LT 350,
+		      set(hotspot[get(i)].crop,"980|359|140|210");
+			);<!--end if(dire LT 350)-->
+		  );<!--end if(dire GT 290)--> 
+		
+		if(dire GE 350,
+		    set(hotspot[get(i)].crop,"0|359|140|210");
+		  );<!--end if(dire GE 350)-->
+		  ,
+		  set(hotspot[get(i)].url,"%SWFPATH%/skin/images/hs_arrow.png");
+		  set(hotspot[get(i)].crop,"0|0|84|150");
+		 );<!--end if(dire!=null)-->	   
+	);<!-- end if(hotspot[get(i)].style=="streetview_gotopano",-->
+  );<!-- end for(set(i,0), i LT hotspot.count, inc(i),-->
+  </action>
+  <action name="VerticalDesEvent">     
+      for(set(i,0), i LT hotspot.count, inc(i),
+	       if(hotspot[get(i)].style=="streetview_gotopano",	
+		        set(vlookat,get(view.vlookat));
+				Math.abs(vlookat);				
+                if(vlookat GE 20,
+				     set(hotspot[get(i)].visible,false);
+				  ,
+				   set(hotspot[get(i)].visible,true);
+				 );		   
+			 );
+	     );
+   </action>
+  <action name="hotspotover">
+   
+    if(hotspot[%1].crop =="0|359|140|210",
+	   set(hotspot[%1].crop,"0|0|140|210");
+	  );<!--end if(hotspot[%1].crop ==0|180|140|180)-->
+	
+	if(hotspot[%1].crop=="700|359|140|210",
+	      set(hotspot[%1].crop,"700|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="700|180|140|180")-->
+		
+	if(hotspot[%1].crop=="280|359|140|210",
+	      set(hotspot[%1].crop,"280|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="280|0|140|180")-->
+		
+	if(hotspot[%1].crop=="560|359|140|210",
+	      set(hotspot[%1].crop,"560|0|140|210");
+	 );<!--end if(hotspot[%1].crop==""560|180|140|180")-->
+		
+			
+	if(hotspot[%1].crop=="140|359|140|210",
+	      set(hotspot[%1].crop,"140|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="140|180|140|180")-->		
+         		
+			
+	if(hotspot[%1].crop=="840|359|140|210",
+	      set(hotspot[%1].crop,"840|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="840|180|140|180")-->
+			
+	if(hotspot[%1].crop=="420|359|140|210",
+	      set(hotspot[%1].crop,"420|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="420|180|140|180")-->
+			
+	if(hotspot[%1].crop=="980|359|140|210",
+	      set(hotspot[%1].crop,"980|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="980|180|140|180")-->
+	 
+			
+	if(hotspot[%1].crop=="1120|359|140|210",
+	      set(hotspot[%1].crop,"1120|0|140|210");
+	 );<!--end if(hotspot[%1].crop=="1120|180|140|180")-->
+	 <!--向下兼容没有箭头方向-->
+	 if(hotspot[%1].crop=="0|0|84|150",
+	      set(hotspot[%1].crop,"84|0|84|150");
+	 );<!--end if(hotspot[%1].crop=="0|0|84|150")-->
+	 
+  </action>
+    <action name="hotspotout">
+   
+    if(hotspot[%1].crop =="0|0|140|210",
+	   set(hotspot[%1].crop,"0|359|140|210");
+	  );<!--end if(hotspot[%1].crop ==0|180|140|180)-->
+	
+	if(hotspot[%1].crop=="700|0|140|210",
+	      set(hotspot[%1].crop,"700|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="700|180|140|180")-->
+		
+	if(hotspot[%1].crop=="280|0|140|210",
+	      set(hotspot[%1].crop,"280|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="280|0|140|180")-->
+		
+	if(hotspot[%1].crop=="560|0|140|210",
+	      set(hotspot[%1].crop,"560|359|140|210");
+	 );<!--end if(hotspot[%1].crop==""560|180|140|180")-->
+		
+			
+	if(hotspot[%1].crop=="140|0|140|210",
+	      set(hotspot[%1].crop,"140|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="140|180|140|180")-->		
+         		
+			
+	if(hotspot[%1].crop=="840|0|140|210",
+	      set(hotspot[%1].crop,"840|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="840|180|140|180")-->
+			
+	if(hotspot[%1].crop=="420|0|140|210",
+	      set(hotspot[%1].crop,"420|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="420|180|140|180")-->
+			
+	if(hotspot[%1].crop=="980|0|140|210",
+	      set(hotspot[%1].crop,"980|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="980|180|140|180")-->
+	 			
+	if(hotspot[%1].crop=="1120|0|140|210",
+	      set(hotspot[%1].crop,"1120|359|140|210");
+	 );<!--end if(hotspot[%1].crop=="1120|180|140|180")-->
+	  <!--向下兼容没有箭头方向-->
+	 if(hotspot[%1].crop=="84|0|84|150",
+	      set(hotspot[%1].crop,"0|0|84|150");
+	 );<!--end if(hotspot[%1].crop=="84|0|84|150")-->
+  </action>
+  <action name="gotoscene" >
+    trace("gotoscene:", %1);
+    copy(panoprev,xml.scene);
+
+    copy(prealign,scene[get(xml.scene)].prealign);
+    if(prealign, add(view.hlookat,prealign); );
+
+    gatrackevent(XML Actions, Gotopano action, get(scene[%1].name) );
+    loadscene(%1,null,merge|keepview,blend(0.7));
+
+    copy(prealign,scene[get(xml.scene)].prealign);
+    if(prealign, sub(view.hlookat,prealign); );
+    if(%2, set(view.hlookat,%2); );
+    if(%3, set(view.vlookat,%3); );
+    if(%4, set(view.fov,%4); );
+  </action>
+
+  <action name="gotopano" >
+    trace("gotopano:", %1);
+
+    set(prealign,view.hlookat);
+
+    loadpano(%1,null,merge|keepview,blend(0.7));
+
+    if(%2, set(view.hlookat,%2); );
+    if(%3, set(view.vlookat,%3); );
+    if(%4, set(view.fov,%4); );
+  </action>
+</krpano>
